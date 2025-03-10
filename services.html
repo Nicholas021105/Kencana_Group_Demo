@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kencana Group</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="asset/logos/kencana-group.png">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+    <header class="bg-white py-2 shadow-md">
+        <nav class="flex justify-between items-center max-w-screen-xl mx-auto px-5 relative">
+            <div class="logo">
+                <img src="asset/logos/kencana-group.png" alt="Logo" class="w-20 h-20 object-cover rounded-full"
+                    loading="lazy" />
+            </div>
+            <ul class="hidden md:flex gap-8">
+                <li>
+                    <a href="index.html"
+                        class="relative font-bold pb-1 text-gray-800 text-sm uppercase transition-colors duration-300 hover:text-[#FFCC00] after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#FFCC00] after:transition-all after:duration-300 hover:after:w-full">Beranda</a>
+                </li>
+                <li>
+                    <a href="about.html"
+                        class="relative font-bold pb-1 text-gray-800 text-sm uppercase transition-colors duration-300 hover:text-[#FFCC00] after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#FFCC00] after:transition-all after:duration-300 hover:after:w-full">Tentang
+                        Kami</a>
+                </li>
+                <li>
+                    <a href="product.html"
+                        class="relative font-bold pb-1 text-gray-800 text-sm uppercase transition-colors duration-300 hover:text-[#FFCC00] after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#FFCC00] after:transition-all after:duration-300 hover:after:w-full">Produk</a>
+                </li>
+                <li>
+                    <a href="services.html"
+                        class="relative font-bold pb-1 text-gray-800 text-sm uppercase transition-colors duration-300 hover:text-[#FFCC00] after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#FFCC00] after:transition-all after:duration-300 hover:after:w-full">Layanan</a>
+                </li>
+            </ul>
+            <div class="hidden md:block">
+                <a href="contact_us.html"
+                    class="inline-block cta-btn bg-[#FFCC00] font-bold text-white py-3 px-6 rounded-full text-[1rem] hover:bg-[#E6B800] hover:scale-110 transform transition-transform duration-300">Hubungi
+                    Kami</a>
+            </div>
+            <button id="mobile-menu-toggle" class="md:hidden text-gray-800">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12" />
+                    <line x1="3" y1="6" x2="21" y2="6" />
+                    <line x1="3" y1="18" x2="21" y2="18" />
+                </svg>
+            </button>
+        </nav>
+    </header>
+    <div id="menu-overlay" class="fixed inset-0 bg-gray-800 bg-opacity-50 z-40 hidden"></div>
+    <div id="menu-drawer"
+        class="fixed top-0 right-0 w-3/4 h-full bg-white transform translate-x-full transition-transform duration-300 z-50">
+        <div class="flex justify-end p-4">
+            <button id="close-menu" class="text-gray-800">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18" />
+                    <line x1="6" y1="6" x2="18" y2="18" />
+                </svg>
+            </button>
+        </div>
+        <ul>
+            <li class="border-b border-gray-200">
+                <a href="index.html"
+                    class="block p-4 font-bold text-gray-800 transition-colors duration-300 hover:bg-gray-100">Beranda</a>
+            </li>
+            <li class="border-b border-gray-200">
+                <a href="about.html"
+                    class="block p-4 font-bold text-gray-800 transition-colors duration-300 hover:bg-gray-100">Tentang
+                    Kami</a>
+            </li>
+            <li class="border-b border-gray-200">
+                <a href="product.html"
+                    class="block p-4 font-bold text-gray-800 transition-colors duration-300 hover:bg-gray-100">Produk</a>
+            </li>
+            <li class="border-b border-gray-200">
+                <a href="services.html"
+                    class="block p-4 font-bold text-gray-800 transition-colors duration-300 hover:bg-gray-100">Layanan</a>
+            </li>
+            <li class="border-b border-gray-200">
+                <a href="contact_us.html"
+                    class="block bg-[#FFCC00] font-bold p-4 text-white transition-colors duration-300 hover:bg-[#E6B800]">Hubungi
+                    Kami</a>
+            </li>
+        </ul>
+    </div>
+    <div class="max-w-screen-xl mx-auto p-8">
+        <section class="bg-white rounded-[1.5rem] p-12 mb-8 shadow-md border border-gray-200">
+            <h2 class="text-[2rem] md:text-[3rem] font-bold text-center mb-4 relative inline-block w-full text-gray-800">
+                Customer Complaint Form
+                <div class="w-16 h-1 bg-gradient-to-r from-[#FFCC00] to-[#E6B800] rounded-full mx-auto mt-2"></div>
+            </h2>
+            <form id="complaintForm" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <label class="block mb-2 text-[1rem] md:text-[1.3rem] font-medium text-gray-800">
+                        <i class="fas fa-user mr-2"></i>Full Name
+                    </label>
+                    <input type="text" name="name" placeholder="Masukkan nama Anda" required
+                        class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-[#FFCC00] bg-gray-50 text-gray-800" />
+                </div>
+                <div>
+                    <label class="block mb-2 text-[1rem] md:text-[1.3rem] font-medium text-gray-800">
+                        <i class="fas fa-barcode mr-2"></i>Product Number
+                    </label>
+                    <input type="text" name="product_id" placeholder="Masukkan nomor produk" required
+                        class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-[#FFCC00] bg-gray-50 text-gray-800" />
+                </div>
+                <div>
+                    <label class="block mb-2 text-[1rem] md:text-[1.3rem] font-medium text-gray-800">
+                        <i class="fas fa-envelope mr-2"></i>Email
+                    </label>
+                    <input type="email" name="email" placeholder="Masukkan email Anda" required
+                        class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-[#FFCC00] bg-gray-50 text-gray-800" />
+                </div>
+                <div>
+                    <label class="block mb-2 text-[1rem] md:text-[1.3rem] font-medium text-gray-800">
+                        <i class="fas fa-exclamation-circle mr-2"></i>Types of Complaints
+                    </label>
+                    <select name="complaint_type" required
+                        class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-[#FFCC00] bg-gray-50 text-gray-800">
+                        <option value="">Select Complaint Type</option>
+                        <option value="rusak">Defective Products</option>
+                        <option value="garansi">Warranty Claims</option>
+                        <option value="penukaran">Product Redemption</option>
+                        <option value="lainnya">Other</option>
+                    </select>
+                </div>
+                <div class="md:col-span-2">
+                    <label class="block mb-2 text-[1rem] md:text-[1.3rem] font-medium text-gray-800">
+                        <i class="fas fa-comment-dots mr-2"></i>Complaint Details
+                    </label>
+                    <textarea name="complaint_details" placeholder="Jelaskan masalah yang Anda alami" required rows="5"
+                        class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-[#FFCC00] bg-gray-50 text-gray-800 min-h-[140px]"></textarea>
+                </div>
+                <div class="md:col-span-2">
+                    <button type="submit" id="button"
+                        class="w-full bg-gradient-to-r from-[#FFCC00] to-[#E6B800] text-[1rem] md:text-[1.3rem] text-white py-3 px-4 rounded-lg font-bold flex items-center justify-center gap-2 hover:-translate-y-1 hover:shadow-md transition">
+                        <i class="fas fa-paper-plane"></i> Submit a Complaint
+                    </button>
+                </div>
+            </form>
+        </section>
+        <section
+            class="bg-gradient-to-br from-[#FFCC00] to-[#E6B800] rounded-[1.5rem] overflow-hidden relative shadow-md">
+            <div class="text-center py-16 px-8">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+                    Lorem ipsum dolor sit
+                </h2>
+                <p class="text-[1rem] md:text-[1.3rem] text-white/90 max-w-xl mx-auto">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+                    condimentum felis at volutpat vehicula.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 p-8">
+                <div
+                    class="bg-[#E6B800] p-8 rounded-lg text-center backdrop-blur-sm hover:-translate-y-1 hover:shadow-lg transition">
+                    <div
+                        class="text-4xl mb-4 bg-gradient-to-br from-[#FFF] to-[#FFF] bg-clip-text text-transparent">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3 class="text-[1.5rem] md:text-[1.8rem] font-bold mb-2 text-white">Lorem ipsum dolor sit</h3>
+                    <p class="text-[1rem] md:text-[1.3rem] text-white">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+                        condimentum felis at volutpat vehicula.
+                    </p>
+                </div>
+                <div
+                    class="bg-[#E6B800] p-8 rounded-lg text-center backdrop-blur-sm hover:-translate-y-1 hover:shadow-lg transition">
+                    <div
+                        class="text-4xl mb-4 bg-gradient-to-br from-[#FFF] to-[#FFF] bg-clip-text text-transparent">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <h3 class="text-[1.5rem] md:text-[1.8rem] font-bold mb-2 text-white">Lorem ipsum dolor sit</h3>
+                    <p class="text-[1rem] md:text-[1.3rem] text-white">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+                        condimentum felis at volutpat vehicula.
+                    </p>
+                </div>
+                <div
+                    class="bg-[#E6B800] p-8 rounded-lg text-center backdrop-blur-sm hover:-translate-y-1 hover:shadow-lg transition">
+                    <div
+                        class="text-4xl mb-4 bg-gradient-to-br from-[#FFF] to-[#FFF] bg-clip-text text-transparent">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3 class="text-[1.5rem] md:text-[1.8rem] font-bold mb-2 text-white">Lorem ipsum dolor sit</h3>
+                    <p class="text-[1rem] md:text-[1.3rem] text-white">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+                        condimentum felis at volutpat vehicula.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer class="bg-white text-gray-800 shadow-inner">
+        <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-10">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+                <div class="flex justify-center md:justify-start">
+                    <div class="w-48 h-48 sm:w-52 sm:h-52 lg:w-64 lg:h-64 flex items-center justify-center">
+                        <img src="asset/logos/kencana-group.png" alt="Company Logo"
+                            class="w-full h-full rounded-full object-cover" loading="lazy">
+                    </div>
+                </div>
+                <div class="space-y-4 text-center md:text-left">
+                    <h2 class="text-lg sm:text-xl font-semibold text-[#FFCC00]">About Us</h2>
+                    <p class="text-sm sm:text-base leading-6 text-gray-600">
+                        Menjadi distributor dan perakitan sepeda, sepeda listrik dan mainan anak-anak yang berbasis roda
+                        terbesar di Sumatera bagian utara pada khususnya dan Indonesia pada umumnya.
+                    </p>
+                    <div class="mt-6 space-y-4">
+                        <h3 class="text-lg sm:text-xl font-semibold text-[#FFCC00]">Contact Us</h3>
+                        <p class="text-sm sm:text-base text-gray-600">Email: contact@company.com</p>
+                        <a href="https://wa.me/1234567890" target="_blank"
+                            class="inline-flex items-center justify-center sm:w-auto bg-green-600 hover:bg-green-700 text-white font-semibold px-6 py-3 rounded-lg shadow-md transition-all duration-200 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2">
+                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M17.507 14.307l-.009.075c-2.199-1.096-2.429-1.242-2.713-.816-.197.295-.771.964-.944 1.162-.175.195-.349.21-.646.075-.3-.15-1.263-.465-2.403-1.485-.888-.795-1.484-1.77-1.66-2.07-.173-.3-.019-.463.13-.606.136-.135.3-.345.45-.517.147-.172.195-.3.293-.495.098-.195.049-.36-.025-.57-.075-.195-.657-1.58-.9-2.16-.24-.58-.487-.5-.657-.51-.168-.008-.363-.008-.558-.008a1.12 1.12 0 00-.79.33c-.273.293-1.04 1.02-1.04 2.49 0 1.47 1.065 2.88 1.215 3.09.15.195 2.096 3.2 5.077 4.49.709.306 1.263.489 1.694.625.712.227 1.36.195 1.872.118.57-.09 1.756-.72 2.006-1.41.255-.7.255-1.29.18-1.41-.075-.12-.27-.195-.57-.345z" />
+                                <path
+                                    d="M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.627 0 .31 5.314.31 11.734c0 2.036.547 3.98 1.508 5.66L0 24l6.796-1.78c1.746.97 3.77 1.5 5.91 1.5 6.42 0 11.737-5.313 11.737-11.733 0-3.19-1.245-6.19-3.49-8.49zm-8.48 18.36c-1.87 0-3.665-.52-5.23-1.44l-.38-.23-3.97 1.03 1.06-3.83-.25-.39c-.97-1.56-1.49-3.39-1.49-5.31 0-5.45 4.43-9.89 9.89-9.89 2.64 0 5.12 1.03 6.99 2.89 1.86 1.86 2.89 4.35 2.89 6.99 0 5.46-4.43 9.89-9.89 9.89z" />
+                            </svg>
+                            <span class="text-sm sm:text-base text-white">Chat via WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="space-y-4 text-center md:text-left">
+                    <h2 class="text-lg sm:text-xl font-semibold text-[#FFCC00] mb-4">Navigation</h2>
+                    <nav>
+                        <ul class="space-y-2">
+                            <li>
+                                <a href="index.html"
+                                    class="relative font-bold pb-1 text-gray-800 text-sm uppercase transition-colors duration-300 hover:text-[#FFCC00] focus:text-[#FFCC00] after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#FFCC00] after:transition-all after:duration-300 hover:after:w-full focus:after:w-full">Beranda</a>
+                            </li>
+                            <li>
+                                <a href="about.html"
+                                    class="relative font-bold pb-1 text-gray-800 text-sm uppercase transition-colors duration-300 hover:text-[#FFCC00] focus:text-[#FFCC00] after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#FFCC00] after:transition-all after:duration-300 hover:after:w-full focus:after:w-full">Tentang Kami</a>
+                            </li>
+                            <li>
+                                <a href="product.html"
+                                    class="relative font-bold pb-1 text-gray-800 text-sm uppercase transition-colors duration-300 hover:text-[#FFCC00] focus:text-[#FFCC00] after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#FFCC00] after:transition-all after:duration-300 hover:after:w-full focus:after:w-full">Produk</a>
+                            </li>
+                            <li>
+                                <a href="services.html"
+                                    class="relative font-bold pb-1 text-gray-800 text-sm uppercase transition-colors duration-300 hover:text-[#FFCC00] focus:text-[#FFCC00] after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#FFCC00] after:transition-all after:duration-300 hover:after:w-full focus:after:w-full">Layanan</a>
+                            </li>
+                            <li>
+                                <a href="contact_us.html"
+                                    class="relative font-bold pb-1 text-gray-800 text-sm uppercase transition-colors duration-300 hover:text-[#FFCC00] focus:text-[#FFCC00] after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#FFCC00] after:transition-all after:duration-300 hover:after:w-full focus:after:w-full">Hubungi
+                                    Kami</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div>
+                        <p class="text-lg sm:text-xl font-semibold text-[#FFCC00] mb-4">Social Media:</p>
+                        <div class="flex gap-4 justify-center md:justify-start">
+                            <a href="#" class="text-gray-800 hover:text-[#FFCC00] transition-colors"
+                                aria-label="Facebook">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
+                                </svg>
+                            </a>
+                            <a href="#" class="text-gray-800 hover:text-[#FFCC00] transition-colors"
+                                aria-label="Twitter">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M19.589 6.686a4.793 4.793 0 0 1-3.77-4.245V2h-3.445v13.672a2.896 2.896 0 0 1-5.201 1.743l-.002-.001.002.001a2.895 2.895 0 0 1 3.183-4.51v-3.5a6.329 6.329 0 0 0-5.394 10.692 6.33 6.33 0 0 0 10.857-4.424V8.687a8.182 8.182 0 0 0 4.773 1.526V6.79a4.831 4.831 0 0 1-1.003-.104z" />
+                                </svg>
+                            </a>
+                            <a href="#" class="text-gray-800 hover:text-[#FFCC00] transition-colors"
+                                aria-label="LinkedIn">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
+                                </svg>
+                            </a>
+                            <a href="#" class="text-gray-800 hover:text-[#FFCC00] transition-colors"
+                                aria-label="Instagram">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="border-gray-300 my-6 sm:my-8" />
+            <div class="text-center">
+                <p class="text-xs sm:text-sm text-gray-500">
+                    © 2025 Company Name. All Rights Reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/scripts.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="module">
+        emailjs.init("wc0KxWSAcG6liw-KK");
+        const form = document.getElementById("complaintForm");
+        const btn = document.getElementById("button");
+        form.addEventListener("submit", function (event) {
+            event.preventDefault();
+            btn.innerHTML = "Sending...";
+            const serviceID = "service_pqjyh7m";
+            const templateID = "template_yy3aay7";
+            emailjs.sendForm(serviceID, templateID, this).then(
+                () => {
+                    btn.innerHTML =
+                        '<i class="fas fa-paper-plane"></i> Submit a Complaint';
+                    alert("Pengaduan terkirim!");
+                    form.reset();
+                },
+                (err) => {
+                    btn.innerHTML =
+                        '<i class="fas fa-paper-plane"></i> Submit a Complaint';
+                    alert("Terjadi kesalahan: " + JSON.stringify(err));
+                }
+            );
+        });
+    </script>
+
+</body>
+
+</html>
