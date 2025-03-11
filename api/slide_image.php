@@ -1,35 +1,34 @@
 <?php
-// Konfigurasi database
-$host = "localhost";
-$user = "u797315644_root";
-$password = "FH^9yUW4^3v|";
-$db_name = "u797315644_carousel_db";
+$conn = new mysqli("localhost", "u797315644_root", "FH^9yUW4^3v|", "u797315644_carousel_db");
+if ($conn->connect_error) die("Koneksi gagal");
 
-// Koneksi ke database
-$conn = new mysqli($host, $user, $password, $db_name);
-if ($conn->connect_error) {
-    die("Koneksi gagal: " . $conn->connect_error);
+if (!isset($_GET['id'])) {
+    http_response_code(400);
+    die("Parameter 'id' tidak ditemukan.");
 }
 
-// Pastikan parameter id ada
-if (isset($_GET['id'])) {
-    $id = intval($_GET['id']);
-    // Ambil data gambar dari tabel slides
-    $stmt = $conn->prepare("SELECT image FROM slides WHERE id = ?");
-    $stmt->bind_param("i", $id);
-    $stmt->execute();
-    $stmt->store_result();
-    if ($stmt->num_rows > 0) {
-        $stmt->bind_result($image);
-        $stmt->fetch();
-        // Asumsikan format gambar JPEG, sesuaikan jika berbeda
+$id = $_GET['id'];
+$stmt = $conn->prepare("SELECT image FROM slides WHERE id = ?");
+$stmt->bind_param("s", $id);
+$stmt->execute();
+$result = $stmt->get_result();
+
+if ($result->num_rows > 0) {
+    $slide = $result->fetch_assoc();
+    if ($slide['image']) {
         header("Content-Type: image/jpeg");
-        echo $image;
+        header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
+        header("Pragma: no-cache");
+        echo $slide['image'];
     } else {
-        header("HTTP/1.0 404 Not Found");
-        echo "Image not found";
+        http_response_code(404);
+        die("Gambar tidak tersedia.");
     }
-    $stmt->close();
+} else {
+    http_response_code(404);
+    die("Slide tidak ditemukan.");
 }
+
+$stmt->close();
 $conn->close();
 ?>
