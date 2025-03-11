@@ -78,13 +78,26 @@
     bottom: 1rem;
     left: 50%;
     transform: translateX(-50%) translateY(10px);
-    background: rgba(0, 0, 0, 0.6);
+    BACKGROUND: rgba(0, 0, 0, 0.6);
     color: #FFCC00;
     padding: 0.5rem 1rem;
     border-radius: 0.5rem;
-    font-size: 1.5rem;
     font-weight: bold;
     z-index: 100;
+    /* Ukuran teks responsif */
+    font-size: 1.125rem; /* 18px untuk layar kecil */
+}
+
+@media (min-width: 640px) { /* sm: */
+    .slide-name {
+        font-size: 1.25rem; /* 20px untuk layar menengah */
+    }
+}
+
+@media (min-width: 768px) { /* md: */
+    .slide-name {
+        font-size: 1.5rem; /* 24px untuk layar besar */
+    }
 }
 .swiper-slide-active .slide-name {
     opacity: 1;
@@ -98,7 +111,7 @@
         transform: scale(0.8);
     }
     .swiper-slide-active {
-        transform: scale(1.5) !important;
+        transform: scale(1.4) !important;
     }
 }
 @media (min-width: 768px) {
@@ -106,7 +119,7 @@
         transform: scale(0.85);
     }
     .swiper-slide-active {
-        transform: scale(1.5) !important;
+        transform: scale(1.4) !important;
     }
 }
 @media (max-width: 480px) {

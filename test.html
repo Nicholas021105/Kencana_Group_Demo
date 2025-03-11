@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <section class="max-w-screen mx-auto h-auto pt-[100px] pb-[200px] bg-white overflow-x-hidden">
+    <div class="mt-16 text-center max-w-[800px] mx-auto">
+    </div>
+    <div id="events-container" class="grid grid-cols-1">
+    </div>
+    <div class="p-6 flex flex-col lg:flex-row items-center">
+      <div class="flex-1 text-center lg:text-left">
+        <h2 class="text-[2rem] md:text-[3rem] font-bold mb-4 text-[#FFCC00]">Event</h2>
+        <p class="text-[1rem] md:text-[1.3rem] mb-6 text-gray-800">
+          Ini adalah deskripsi event. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+      </div>
+      <div class="flex-shrink-0 mt-4 lg:mt-0 lg:ml-6 p-4">
+        <a href="#"
+           class="inline-block cta-btn bg-[#FFCC00] font-bold text-white py-3 px-6 rounded-full text-[1rem] md:text-[1.3rem] hover:bg-[#E6B800] hover:scale-110 transform transition-transform duration-300">
+          Daftar Sekarang
+        </a>
+      </div>
+    </div>
+  </section>
+  <script>
+    const API_BASE_URL = 'https://kj-demo.site/api';
+    document.addEventListener('DOMContentLoaded', function () {
+      fetch(`${API_BASE_URL}/events.php`)
+        .then(response => response.json())
+        .then(data => {
+          const events = data.data;
+          const eventsContainer = document.getElementById('events-container');
+          if (eventsContainer) {
+            eventsContainer.innerHTML = '';
+            events.forEach(event => {
+              eventsContainer.innerHTML += `
+                <div class="event-card bg-white shadow-lg overflow-hidden">
+                  <img src="${API_BASE_URL}/event_image.php?id=${event.id}" alt="Event Image" class="w-full h-[80vh] lg:h-auto lg:max-h-[75vh] object-cover" loading="lazy" />
+                </div>
+              `;
+            });
+          }
+        })
+        .catch(error => {
+          console.error('Error fetching events:', error);
+        });
+    });
+  </script>
+</body>
+</html>
