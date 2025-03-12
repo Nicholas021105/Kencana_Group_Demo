@@ -16,7 +16,7 @@
         <nav class="flex justify-between items-center max-w-screen-xl mx-auto px-6 relative">
             <div class="logo">
                 <a href="index.html"
-                    class="block transition-all duration-300 hover:scale-105 hover:shadow-md rounded-full">
+                    class="block transition-all duration-300 hover:scale-105 rounded-full">
                     <img src="asset/logos/kencana-group.png" alt="Logo" class="w-20 h-20 object-cover rounded-full"
                         loading="lazy" />
                 </a>
@@ -98,7 +98,7 @@
             <h2
                 class="text-[1.5rem] sm:text-[2rem] md:text-[3rem] font-bold text-center mb-4 relative inline-block w-full text-gray-800">
                 Customer Complaint Form
-                <div class="w-16 h-1 bg-gradient-to-r from-[#FFCC00] to-[#E6B800] rounded-full mx-auto mt-2"></div>
+                <div class="w-16 h-1 bg-[#FFCC00] rounded-full mx-auto mt-2"></div>
             </h2>
             <form id="complaintForm" class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
                 <div>
@@ -144,7 +144,7 @@
                 </div>
                 <div class="md:col-span-2">
                     <button type="submit" id="button"
-                        class="w-full bg-gradient-to-r from-[#FFCC00] to-[#E6B800] text-sm sm:text-base md:text-lg text-white py-2 px-3 sm:py-3 sm:px-4 rounded-lg font-bold flex items-center justify-center gap-2 hover:-translate-y-1 hover:shadow-md transition">
+                        class="w-full bg-[#FFCC00] text-sm sm:text-base md:text-lg text-white py-2 px-3 sm:py-3 sm:px-4 rounded-lg font-bold flex items-center justify-center gap-2 hover:-translate-y-1 hover:shadow-md transition">
                         <i class="fas fa-paper-plane"></i> Submit a Complaint
                     </button>
                 </div>
@@ -153,19 +153,19 @@
 
         <!-- Bagian Fitur -->
         <section
-            class="bg-gradient-to-br from-[#FFCC00] to-[#E6B800] rounded-[1.5rem] overflow-hidden relative shadow-md">
+            class="bg-[#FFF] rounded-[1.5rem] overflow-hidden relative shadow-md">
             <div class="text-center py-8 px-4 sm:py-12 sm:px-6 md:py-16 md:px-8">
-                <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">
+                <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold test-black mb-4">
                     Lorem ipsum dolor sit
                 </h2>
-                <p class="text-sm sm:text-base md:text-lg text-white/90 max-w-xl mx-auto">
+                <p class="text-sm sm:text-base md:text-lg test-black/90 max-w-xl mx-auto">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
                     condimentum felis at volutpat vehicula.
                 </p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8 p-4 sm:p-6 md:p-8">
                 <div
-                    class="bg-[#E6B800] p-4 sm:p-6 md:p-8 rounded-lg text-center backdrop-blur-sm hover:-translate-y-1 hover:shadow-lg transition">
+                    class="bg-[#FFCC00] p-4 sm:p-6 md:p-8 rounded-lg text-center backdrop-blur-sm hover:-translate-y-1 hover:shadow-lg transition">
                     <div
                         class="text-3xl sm:text-4xl mb-4 bg-gradient-to-br from-[#FFF] to-[#FFF] bg-clip-text text-transparent">
                         <i class="fas fa-tools"></i>
@@ -177,7 +177,7 @@
                     </p>
                 </div>
                 <div
-                    class="bg-[#E6B800] p-4 sm:p-6 md:p-8 rounded-lg text-center backdrop-blur-sm hover:-translate-y-1 hover:shadow-lg transition">
+                    class="bg-[#FFCC00] p-4 sm:p-6 md:p-8 rounded-lg text-center backdrop-blur-sm hover:-translate-y-1 hover:shadow-lg transition">
                     <div
                         class="text-3xl sm:text-4xl mb-4 bg-gradient-to-br from-[#FFF] to-[#FFF] bg-clip-text text-transparent">
                         <i class="fas fa-sync-alt"></i>
@@ -189,7 +189,7 @@
                     </p>
                 </div>
                 <div
-                    class="bg-[#E6B800] p-4 sm:p-6 md:p-8 rounded-lg text-center backdrop-blur-sm hover:-translate-y-1 hover:shadow-lg transition">
+                    class="bg-[#FFCC00] p-4 sm:p-6 md:p-8 rounded-lg text-center backdrop-blur-sm hover:-translate-y-1 hover:shadow-lg transition">
                     <div
                         class="text-3xl sm:text-4xl mb-4 bg-gradient-to-br from-[#FFF] to-[#FFF] bg-clip-text text-transparent">
                         <i class="fas fa-headset"></i>
@@ -262,37 +262,80 @@
                         </ul>
                     </nav>
                     <div>
-                        <p class="font-semibold mb-4 text-sm sm:text-base md:text-lg text-gray-800">Social Media:</p>
-                        <div class="flex items-center gap-4">
+                        <p class="text-lg sm:text-xl font-semibold text-[#FFCC00] mb-4">Social Media:</p>
+                        <div class="flex items-center justify-center md:justify-start gap-4">
                             <a href="#"
                                 class="text-gray-800 hover:text-[#FFCC00] transition-colors duration-300 hover:scale-[1.5] transform transition-transform">
-                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <?xml version="1.0"?><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50"
+                                    width="40px" height="40px" fill="currentColor">
                                     <path
-                                        d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
+                                        d="M41,4H9C6.24,4,4,6.24,4,9v32c0,2.76,2.24,5,5,5h32c2.76,0,5-2.24,5-5V9C46,6.24,43.76,4,41,4z M37,19h-2c-2.14,0-3,0.5-3,2 v3h5l-1,5h-4v15h-5V29h-4v-5h4v-3c0-4,2-7,6-7c2.9,0,4,1,4,1V19z" />
                                 </svg>
                             </a>
                             <a href="#"
                                 class="text-gray-800 hover:text-[#FFCC00] transition-colors duration-300 hover:scale-[1.5] transform transition-transform">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 50 50"
-                                    width="30px" height="30px">
+                                    width="40px" height="40px">
                                     <path
                                         d="M41,4H9C6.243,4,4,6.243,4,9v32c0,2.757,2.243,5,5,5h32c2.757,0,5-2.243,5-5V9C46,6.243,43.757,4,41,4z M37.006,22.323 c-0.227,0.021-0.457,0.035-0.69,0.035c-2.623,0-4.928-1.349-6.269-3.388c0,5.349,0,11.435,0,11.537c0,4.709-3.818,8.527-8.527,8.527 s-8.527-3.818-8.527-8.527s3.818-8.527,8.527-8.527c0.178,0,0.352,0.016,0.527,0.027v4.202c-0.175-0.021-0.347-0.053-0.527-0.053 c-2.404,0-4.352,1.948-4.352,4.352s1.948,4.352,4.352,4.352s4.527-1.894,4.527-4.298c0-0.095,0.042-19.594,0.042-19.594h4.016 c0.378,3.591,3.277,6.425,6.901,6.685V22.323z" />
                                 </svg>
                             </a>
-                            <a href="#"
-                                class="text-gray-800 hover:text-[#FFCC00] transition-colors duration-300 hover:scale-[1.5] transform transition-transform"
-                                aria-label="LinkedIn">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor"
-                                    viewBox="0 0 50 50">
-                                    <path
-                                        d="M 25 1 C 19.672869 1 15.604123 5.9531422 15.166016 12 L 5.0585938 12 C 3.9235937 12 2.999376 12.980995 3.0625 14.113281 L 4.7871094 44.285156 C 4.9365844 46.922145 7.1369035 49 9.7773438 49 L 40.222656 49 C 42.863851 49 45.063433 46.921831 45.212891 44.285156 L 46.9375 14.115234 C 47.002643 12.982141 46.076406 12 44.941406 12 L 34.833984 12 C 34.395877 5.9531422 30.327131 1 25 1 z M 25 3 C 29.036936 3 32.408924 6.8867916 32.835938 12 L 17.164062 12 C 17.591075 6.8867916 20.963064 3 25 3 z M 25.080078 18 C 28.920078 18 31.799062 20.060938 32.039062 20.210938 L 31.009766 21.880859 C 30.759766 21.710859 30.310625 21.439844 30.140625 21.339844 C 29.120625 20.789844 27.240078 19.970703 25.080078 19.970703 C 21.830078 19.970703 19.480469 21.77 19.480469 24.25 C 19.480469 26.72 21.660234 27.699766 25.240234 29.009766 C 28.870234 30.329766 32.970703 31.829609 32.970703 36.599609 C 32.970703 40.189609 29.430156 43.009766 24.910156 43.009766 C 20.920156 43.009766 17.640078 40.560156 16.830078 39.910156 L 17.939453 38.259766 C 17.969453 38.289766 21.160156 41.029297 24.910156 41.029297 C 28.270156 41.029297 31 39.039609 31 36.599609 C 31 33.439609 28.570547 32.319375 24.560547 30.859375 C 21.260547 29.649375 17.509766 28.28 17.509766 24.25 C 17.509766 20.69 20.760078 18 25.080078 18 z" />
+                            <a href="#" class="group" aria-label="LinkedIn">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    viewBox="0 0 256 256" width="40px" height="40px" fill-rule="nonzero"
+                                    class="transform transition-transform duration-300 group-hover:scale-[1.5]">
+                                    <g transform="translate(38.4,38.4) scale(0.7,0.7)">
+                                        <g fill="#1F2937" fill-rule="nonzero" stroke="none" stroke-width="1"
+                                            stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10"
+                                            stroke-dasharray="" stroke-dashoffset="0" font-family="none"
+                                            font-weight="none" font-size="none" text-anchor="none"
+                                            style="mix-blend-mode: normal"
+                                            class="transition-colors duration-300 group-hover:fill-[#FFCC00]">
+                                            <path
+                                                d="M3.65714,283.42857c-17.16817,0 -31.08571,-13.91755 -31.08571,-31.08571v-248.68571c0,-17.16817 13.91755,-31.08571 31.08571,-31.08571h248.68571c17.16817,0 31.08571,13.91755 31.08571,31.08571v248.68571c0,17.16817 -13.91755,31.08571 -31.08571,31.08571z"
+                                                id="shape"></path>
+                                        </g>
+                                        <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1"
+                                            stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10"
+                                            stroke-dasharray="" stroke-dashoffset="0" font-family="none"
+                                            font-weight="none" font-size="none" text-anchor="none"
+                                            style="mix-blend-mode: normal">
+                                            <g transform="scale(5.12,5.12)">
+                                                <path
+                                                    d="M25,1c-5.32713,0 -9.39588,4.95314 -9.83398,11h-10.10742c-1.135,0 -2.05922,0.981 -1.99609,2.11328l1.72461,30.17188c0.14947,2.63699 2.34979,4.71484 4.99023,4.71484h30.44531c2.64119,0 4.84078,-2.07817 4.99023,-4.71484l1.72461,-30.16992c0.06514,-1.13309 -0.86109,-2.11523 -1.99609,-2.11523h-10.10742c-0.43811,-6.04686 -4.50685,-11 -9.83398,-11zM25,3c4.03694,0 7.40892,3.88679 7.83594,9h-15.67188c0.42701,-5.11321 3.799,-9 7.83594,-9zM25.08008,18c3.84,0 6.71898,2.06094 6.95898,2.21094l-1.0293,1.66992c-0.25,-0.17 -0.69914,-0.44102 -0.86914,-0.54102c-1.02,-0.55 -2.90055,-1.36914 -5.06055,-1.36914c-3.25,0 -5.59961,1.7993 -5.59961,4.2793c0,2.47 2.17976,3.44977 5.75977,4.75977c3.63,1.32 7.73047,2.81984 7.73047,7.58984c0,3.59 -3.54055,6.41016 -8.06055,6.41016c-3.99,0 -7.27008,-2.44961 -8.08008,-3.09961l1.10938,-1.65039c0.03,0.03 3.2207,2.76953 6.9707,2.76953c3.36,0 6.08984,-1.98969 6.08984,-4.42969c0,-3.16 -2.42945,-4.28023 -6.43945,-5.74023c-3.3,-1.21 -7.05078,-2.57937 -7.05078,-6.60937c0,-3.56 3.25031,-6.25 7.57031,-6.25z">
+                                                </path>
+                                            </g>
+                                        </g>
+                                    </g>
                                 </svg>
                             </a>
-                            <a href="#"
-                                class="text-gray-800 hover:text-[#FFCC00] transition-colors duration-300 hover:scale-[1.5] transform transition-transform">
-                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                                    <path
-                                        d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                            <a href="#" class="group" aria-label="Instagram">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    viewBox="0,0,256,256" width="40px" height="40px" fill-rule="nonzero"
+                                    class="transform transition-transform duration-300 group-hover:scale-[1.5]">
+                                    <g transform="translate(12.8,12.8) scale(0.9,0.9)">
+                                        <g fill="#1F2937" fill-rule="nonzero" stroke="none" stroke-width="1"
+                                            stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10"
+                                            stroke-dasharray="" stroke-dashoffset="0" font-family="none"
+                                            font-weight="none" font-size="none" text-anchor="none"
+                                            style="mix-blend-mode: normal"
+                                            class="transition-colors duration-300 group-hover:fill-[#FFCC00]">
+                                            <path
+                                                d="M35.84,243.2c-12.72464,0 -23.04,-10.31536 -23.04,-23.04v-184.32c0,-12.72464 10.31536,-23.04 23.04,-23.04h184.32c12.72464,0 23.04,10.31536 23.04,23.04v184.32c0,12.72464 -10.31536,23.04 -23.04,23.04z"
+                                                id="shape"></path>
+                                        </g>
+                                        <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1"
+                                            stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10"
+                                            stroke-dasharray="" stroke-dashoffset="0" font-family="none"
+                                            font-weight="none" font-size="none" text-anchor="none"
+                                            style="mix-blend-mode: normal">
+                                            <g transform="scale(10.66667,10.66667)">
+                                                <path
+                                                    d="M8,3c-2.74952,0 -5,2.25048 -5,5v8c0,2.74952 2.25048,5 5,5h8c2.74952,0 5,-2.25048 5,-5v-8c0,-2.74952 -2.25048,-5 -5,-5zM8,5h8c1.66848,0 3,1.33152 3,3v8c0,1.66848 -1.33152,3 -3,3h-8c-1.66848,0 -3,-1.33152 -3,-3v-8c0,-1.66848 1.33152,-3 3,-3zM17,6c-0.55228,0 -1,0.44772 -1,1c0,0.55228 0.44772,1 1,1c0.55228,0 1,-0.44772 1,-1c0,-0.55228 -0.44772,-1 -1,-1zM12,7c-1.58333,0 -2.89811,0.62976 -3.74805,1.58594c-0.84994,0.95618 -1.25195,2.19184 -1.25195,3.41406c0,1.22222 0.40201,2.45788 1.25195,3.41406c0.84994,0.95618 2.16471,1.58594 3.74805,1.58594c1.58333,0 2.89811,-0.62976 3.74805,-1.58594c0.84994,-0.95618 1.25195,-2.19184 1.25195,-3.41406c0,-1.22222 -0.40201,-2.45788 -1.25195,-3.41406c-0.84994,-0.95618 -2.16471,-1.58594 -3.74805,-1.58594zM12,9c1.08333,0 1.76856,0.37024 2.25195,0.91406c0.48339,0.54382 0.74805,1.30816 0.74805,2.08594c0,0.77778 -0.26465,1.54212 -0.74805,2.08594c-0.48339,0.54382 -1.16862,0.91406 -2.25195,0.91406c-1.08333,0 -1.76856,-0.37024 -2.25195,-0.91406c-0.48339,-0.54382 -0.74805,-1.30816 -0.74805,-2.08594c0,-0.77778 0.26465,-1.54212 0.74805,-2.08594c0.48339,-0.54382 1.16862,-0.91406 2.25195,-0.91406z">
+                                                </path>
+                                            </g>
+                                        </g>
+                                    </g>
                                 </svg>
                             </a>
                         </div>
